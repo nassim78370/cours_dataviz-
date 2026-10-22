@@ -45,9 +45,7 @@ u
 - **Couleurs de rareté** : reprises exactement du jeu : gris (Commune), vert (Peu commune), bleu (Rare)
 , violet (Épique), or (Légendaire)
 
-Ce choix permet à un joueur de Fortnite de reconnaître immédiatement les niveaux de rareté sans légende
- supplémentaire, tout en offrant unehérente conformément aux bonnes pratiq
-ues de visualisation de données.
+Ce choix permet à un joueur de Fortnite de reconnaître immédiatement les niveaux de rareté sans légende supplémentaire, tout en offrant une palette intentionnelle et cohérente conformément aux bonnes pratiques de visualisation de données.
 
 ---
 
