@@ -32,7 +32,22 @@ L'objectif est de visualiser les différences de performances entre les catégor
 
 <img width="1919" height="552" alt="Capture d&#39;écran 2026-10-22 210632" src="https://github.com/user-attachments/assets/54a357c3-8d85-4ada-a66f-acbd25ba59bc" />
 
+---
 
+## Choix des couleurs
+
+La palette de couleurs du dashboard a été choisie pour coller à l'univers visuel du jeu Fortnite :
+
+- **Bleu `#1B90DD`** — couleur emblématique de l'interface Fortnite, utilisée comme fond principal
+- **Bleu nuit `#0d3060`** — fond des panneaux et graphiques, reprenant les tons sombres des menus du je
+u
+- **Or `#d9a93a`** — couleur des éléments Légendaires dans le jeu, utilisée pour les titres et accents
+- **Couleurs de rareté** — reprises exactement du jeu : gris (Commune), vert (Peu commune), bleu (Rare)
+, violet (Épique), or (Légendaire)
+
+Ce choix permet à un joueur de Fortnite de reconnaître immédiatement les niveaux de rareté sans légende
+ supplémentaire, tout en offrant unehérente conformément aux bonnes pratiq
+ues de visualisation de données.
 
 ---
 
