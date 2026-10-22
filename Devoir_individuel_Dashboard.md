@@ -1,6 +1,6 @@
 # 🎯 FORTNITE — ARSENAL ANALYTICS
 
-Dashboard interactif réalisé avec **Python, Streamlit, Pandas et Plotly Express**
+Dashboard interactif réalisé avec **Python, Streamlit et Pandas**
 sur les caractéristiques des armes de Fortnite Battle Royale (jeu de données
 *Fortnite BR Weapon Attributes*, Kaggle, 2019 : 43 variantes d'armes).
 
@@ -40,7 +40,6 @@ L'objectif est de visualiser les différences de performances entre les catégor
 
 - **Python 3.12**
 - **Streamlit** — interface web interactive
-- **Plotly Express** — visualisations interactives
 - **Pandas** — traitement des données
 - **NumPy** — calcul de la droite de tendance
 
