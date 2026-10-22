@@ -1,4 +1,4 @@
-# 🎯 FORTNITE — ARSENAL ANALYTICS
+#  FORTNITE — ARSENAL ANALYTICS
 
 Dashboard interactif réalisé avec **Python, Streamlit et Pandas**
 sur les caractéristiques des armes de Fortnite Battle Royale (jeu de données
