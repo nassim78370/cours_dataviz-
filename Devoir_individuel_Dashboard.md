@@ -30,7 +30,8 @@ L'objectif est de visualiser les différences de performances entre les catégor
 
 <img width="1919" height="1031" alt="Capture d&#39;écran 2026-10-22 210602" src="https://github.com/user-attachments/assets/e8229365-f43c-4b34-a453-f0beb041d8e4" />
 
-<img width="1919" height="552" alt="Capture d&#39;écran 2026-10-22 210632" src="https://github.com/user-attachments/assets/54a357c3-8d85-4ada-a66f-acbd25ba59bc" />
+<img width="1919" height="557" alt="Capture d&#39;écran 2026-10-22 223214" src="https://github.com/user-attachments/assets/b0f76bc8-0701-438c-bfea-6275c963abe5" />
+
 
 ---
 
