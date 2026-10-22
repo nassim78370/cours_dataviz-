@@ -28,9 +28,11 @@ L'objectif est de visualiser les différences de performances entre les catégor
 
 ## Captures d'écran
 
-![Dashboard - partie haute](dashboard_1.png)
+<img width="1919" height="1031" alt="Capture d&#39;écran 2026-10-22 210602" src="https://github.com/user-attachments/assets/e8229365-f43c-4b34-a453-f0beb041d8e4" />
 
-![Dashboard - partie basse](dashboard_2.png)
+<img width="1919" height="552" alt="Capture d&#39;écran 2026-10-22 210632" src="https://github.com/user-attachments/assets/54a357c3-8d85-4ada-a66f-acbd25ba59bc" />
+
+
 
 ---
 
