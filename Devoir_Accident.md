@@ -4,7 +4,7 @@
 
 **Règle 7 – Étiquettes et graduations lisibles.** Dans l'exemple, les six longues étiquettes de l'axe horizontal se chevauchent et deviennent illisibles. La correction consiste à incliner les étiquettes, qui restent alors lisibles. Si elles ne rentrent toujours pas, il vaut mieux raccourcir les libellés ou simplifier le graphique plutôt que de multiplier les rotations.
 
-**Règle 8 – Accessibilité des couleurs.** Le graphique en anneau utilise six couleurs et une légende : certaines teintes sont proches et la couleur seule ne suffit pas à distinguer les catégories (daltonisme, impression en noir et blanc). L'exemple corrigé ajoute des étiquettes directes et des motifs (hachures, points, quadrillage) qui apportent des indices en plus de la couleur.
+**Règle 8 – Accessibilité des couleurs.** Le graphique en anneau utilise six couleurs et une légende, certaines teintes sont proches et la couleur seule ne suffit pas à distinguer les catégories (daltonisme, impression en noir et blanc). L'exemple corrigé ajoute des étiquettes directes et des motifs (hachures, points, quadrillage) qui apportent des indices en plus de la couleur.
 
 **Règle 9 – Étiquetage direct.** Dans l'exemple, une légende de quatre lignes oblige le lecteur à faire des allers-retours entre la légende et les courbes. La correction est d'écrire le nom de chaque courbe directement à son extrémité, ce qui fonctionne bien quand il n'y a que deux à quatre séries.
 
@@ -26,15 +26,16 @@
 
 ## Partie 2 – Cartographie des accidents en Île-de-France
 
-**Données et nettoyage.** J'ai utilisé le fichier `caract-2025.csv` (data.gouv.fr, ONISR) : 55 093 accidents corporels en France, outre-mer compris. Je n'ai gardé que les 8 départements d'Île-de-France, soit **14 760 accidents**. Nettoyage : coordonnées converties (virgule décimale, espaces parasites), valeur manquante `-1` remplacée, et contrôle que chaque point tombe dans son département (aucune erreur). Variables utilisées : `lat`/`long`, `dep` et `hrmn` (heure). Le code est dans `analyse_accidents_idf.py`.
+**Données et nettoyage.** J'ai utilisé le fichier `caract-2025.csv` (data.gouv.fr, ONISR) : 55 093 accidents corporels en France, outre-mer compris. J'ai gardé que les 8 départements d'Île-de-France, **14 760 accidents**. Nettoyage : coordonnées converties (virgule décimale, espaces parasites), valeur manquante `-1` remplacée, Variables utilisées : `lat`/`long`, `dep` et `hrmn` (heure).
 
-![Les trois graphiques](images/synthese_3_graphiques.png)
+<img width="1890" height="993" alt="synthese_3_graphiques" src="https://github.com/user-attachments/assets/156ef56e-04c4-47a2-8cd1-c5a0f8b262ed" />
 
-**Carte (à gauche).** Chaque hexagone est coloré selon la densité d'accidents : plus il est foncé, plus il y a d'accidents. Le maximum se trouve au cœur de Paris (jusqu'à 442 accidents dans un hexagone), et la densité décroît avec la distance au centre. Les grands axes routiers apparaissent comme des traînées d'hexagones qui rayonnent depuis Paris jusqu'en grande couronne.
 
-**Accidents par heure (en haut à droite).** Le nombre d'accidents est minimal la nuit (158 à 3 h) et présente deux pics : le matin (1 019 à 8 h) et surtout en fin d'après-midi, avec un maximum de 1 170 à 18 h, mis en évidence par la barre foncée. Ces pics correspondent aux trajets domicile-travail. Entre 10 h et 15 h, le nombre reste stable autour de 650 à 750 par heure.
+**Carte.** Chaque hexagone est coloré selon la densité d'accidents : plus il est foncé, plus il y a d'accidents. Le maximum se trouve au cœur de Paris (jusqu'à 442 accidents dans un hexagone), et la densité décroît avec la distance au centre. Les grands axes routiers apparaissent comme des traînées d'hexagones qui rayonnent depuis Paris jusqu'en grande couronne.
 
-**Accidents par département (en bas à droite).** Paris est en tête avec 3 681 accidents (25 % de la région), suivi de la Seine-Saint-Denis (2 355), des Hauts-de-Seine (2 289) et du Val-de-Marne (2 017). Les départements de grande couronne ont moins d'accidents (de 860 pour le Val-d'Oise à 1 338 pour l'Essonne). Paris et la petite couronne concentrent 70 % des accidents, ce qui confirme la carte.
+**Accidents par heure.** Le nombre d'accidents est minimal la nuit (158 à 3 h) et présente deux pics : le matin (1 019 à 8 h) et surtout en fin d'après-midi, avec un maximum de 1 170 à 18 h, mis en évidence par la barre foncée. Ces pics correspondent aux trajets domicile-travail (notamment le retour en fin de journées ou les usagers sont plus fatigués et pressés de rentrer). Entre 10 h et 15 h, le nombre reste stable autour de 650 à 750 par heure.
+
+**Accidents par département.** Paris est en tête avec 3 681 accidents (25 % de la région), suivi de la Seine-Saint-Denis (2 355), des Hauts-de-Seine (2 289) et du Val-de-Marne (2 017). Les départements de grande couronne ont moins d'accidents (de 860 pour le Val-d'Oise à 1 338 pour l'Essonne). Paris et la petite couronne concentrent 70 % des accidents, ce qui confirme la carte.
 
 **Limites.** Ce sont des effectifs, pas des taux : sans trafic ni population, on ne peut pas dire qu'un département est « plus dangereux ». Le fichier ne contient pas non plus la gravité (blessés, tués).
 
@@ -49,15 +50,11 @@
 - **Règle 14 – Précision décimale :** effectifs en nombres entiers.
 - **Règle 16 – Économie visuelle :** une information par graphique, un seul accent de couleur.
 
-Contre-exemple pour la règle 13 : le nuage de points direct est illisible au centre.
-
-![Nuage de points direct](images/fig0_contre_exemple_nuage_points.png)
 
 ### Justification des choix
 
-- **Hexagones** : ils gardent la structure géographique et les différences de densité que les points masquent.
+- **Hexagones** : différences de densité que les points masquent.
 - **Rouge** : un dégradé d'une seule teinte se lit facilement, et le rouge évoque un phénomène négatif. La barre de couleur indique seulement « Faible » et « Forte » : le nombre exact par hexagone n'intéresse pas le lecteur.
 - **Barres pour les heures** : on compte des accidents par heure, ce que des barres représentent mieux qu'une courbe, qui suggère une continuité.
 - **Barres horizontales triées pour les départements** : les noms sont longs et il n'y a pas d'ordre naturel.
 
-Pour reproduire : placer `caract-2025.csv` et `departements.geojson` dans `data/`, puis `python analyse_accidents_idf.py`.
